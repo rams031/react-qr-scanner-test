@@ -5,7 +5,7 @@ import { useState } from 'react';
 function App() {
 
   const [switchCamera, setSwitchCamera] = useState(false);
-
+  const [dataWeb, setDataWeb] = useState("");
   const style = {
     objectFit: 'fill',
     // height: 300,
@@ -21,16 +21,18 @@ function App() {
         // switchCamera ? 'user' : 'environment'
         // facingMode={switchCamera ? 'rear' : 'front'}
         constraints={{
-          audio: true,
+          audio: false,
           video: { facingMode: "environment" }
         }}
         onError={(err) => console.log(err)}
         onScan={(data) => {
           if (data) {
+            setDataWeb(data);
             alert(data);
           }
         }}
       />
+      <div>{dataWeb}</div>
       <button onClick={() => {
         setSwitchCamera(!switchCamera)
       }}>switch camera</button>
