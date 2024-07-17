@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import QRReader from 'react-qr-scanner';
 import { useState } from 'react';
