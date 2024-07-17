@@ -22,7 +22,7 @@ function App() {
         // facingMode={switchCamera ? 'rear' : 'front'}
         constraints={{
           audio: false,
-          video: { facingMode: "environment" }
+          video: { facingMode: switchCamera ? "user" : "environment" }
         }}
         onError={(err) => console.log(err)}
         onScan={(data) => {
