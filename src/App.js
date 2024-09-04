@@ -8,7 +8,7 @@ function App() {
   const [dataWeb, setDataWeb] = useState("");
   const style = {
     objectFit: 'fill',
-    height: 300,
+    height: 500,
     width: '-webkit-fill-available'
   }
 
